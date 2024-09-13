@@ -5,7 +5,6 @@ import { TypewriterEffect, TypewriterEffectSmooth } from "@/components/ui/typewr
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import LampDemo, { LampContainer } from "@/components/ui/lamp";
 import {motion} from 'framer-motion'
-import { SparklesCore } from "@/components/ui/sparkles";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import Link from "next/link";
 
@@ -120,7 +119,7 @@ export default function Home() {
 
         <div className="flex justify-center mt-20">
           <p className="text-white text-lg w-fit rounded-2xl p-3 mt-10">
-            Give me cases similar to case no. 13813
+            Give me cases similar to case no. 12345
           </p>
           <Image src={send} alt='Enter button' className="scale-50"/>
         </div>
@@ -140,7 +139,7 @@ export default function Home() {
           <p className="text-white text-lg w-fit rounded-2xl p-3 mt-10">
             Give me cases involving these keywords:
             <br />
-            Employment discrimination, Gender discrimination, Wrongful termination, Hostile work environment
+            Wrongful termination, Contract Violation, Employment rights
           </p>
           <Image src={send} alt='Enter button' className="scale-50"/>
         </div>

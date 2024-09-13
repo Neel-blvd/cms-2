@@ -179,9 +179,9 @@ function IconContainer({
         onMouseLeave={() => setHovered(false)}
         className={`aspect-square rounded-full 
           ${isActivePage == '/' && title == 'Home' ? 'bg-red-700' : ''}
-          ${isActivePage == '/manage' && title == 'Manage' ? 'bg-red-700' : ''}
-          ${isActivePage == '/caseAI' && title == 'CaseAI' ? 'bg-red-700' : ''}
-          ${isActivePage == '/help' && title == 'Help' ? 'bg-red-700' : ''}
+          ${isActivePage.startsWith('/manage') && title == 'Manage' ? 'bg-red-700' : ''}
+          ${isActivePage.startsWith('/caseAI') && title == 'CaseAI' ? 'bg-red-700' : ''}
+          ${isActivePage.startsWith('/help') && title == 'Help' ? 'bg-red-700' : ''}
           bg-black dark:bg-neutral-800 flex items-center justify-center relative`}
       >
         <AnimatePresence>
