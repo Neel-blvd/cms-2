@@ -49,7 +49,7 @@ export default function Home() {
     {
       title: 'Draft 1',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      link: '/caseAI'
+      link: '/'
     },
     {
       title: 'Draft 2',
@@ -59,7 +59,7 @@ export default function Home() {
     {
       title: 'Draft 3',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      link: '/caseAI'
+      link: '/manage'
     },
   ]
 
@@ -109,7 +109,7 @@ export default function Home() {
 
         <div className="w-fit mx-auto mt-20">
           <Link href='/caseAI'>
-            <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-2xl border border-neutral-950 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-green-500 text-lg transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+          <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-2xl border border-neutral-950 bg-[linear-gradient(110deg,#000103,45%,#22c55e,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white text-lg transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
               Generate
             </button>
           </Link> 
@@ -147,8 +147,8 @@ export default function Home() {
 
         <div className="w-fit mx-auto mt-5">
           <Link href='/caseAI'>
-            <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-2xl border border-neutral-950 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-green-500 text-lg transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-              Search
+          <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-2xl border border-neutral-950 bg-[linear-gradient(110deg,#000103,45%,#22c55e,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white text-lg transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            Search
             </button>
           </Link>
         </div>
