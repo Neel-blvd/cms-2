@@ -14,7 +14,7 @@ function Case(props: {
     <div>
         {
             !clicked ?
-                <p onClick={() => setClicked(!clicked)} className='text-green-500 border rounded-xl mx-auto w-fit p-2'>
+                <div onClick={() => setClicked(!clicked)} className='text-green-500 border rounded-xl mx-auto w-fit p-2'>
                 
                 {
                     id ?
@@ -24,17 +24,17 @@ function Case(props: {
                 }
                         
                 
-                </p>
+                </div>
             :
                 <div onClick={() => setClicked(!clicked)} className='w-full'>
-                    <p className='text-green-500 border rounded-xl mx-auto w-fit p-2'>
+                    <div className='text-green-500 border rounded-xl mx-auto w-fit p-2'>
                     {
                     id ?
                         <p>Case #{id}</p>
                     :
                         <p>Case #12345</p>
                     }
-                    </p>
+                    </div>
                     <iframe src={link} className='w-full h-screen'></iframe>
                 </div>
                 

@@ -14,13 +14,13 @@ import Image from 'next/image'
 import Case from '@/components/Case'
 import { useRouter } from 'next/navigation'
 import GenerateCaseForm from '@/components/GenerateCaseForm'
+import { toast } from 'sonner'
 
 
 
 function page() {
 
   const [similarCases, setSimilarCases] = useState<string[] | undefined>([]);
-  const [step, setStep] = useState(1);
   const router = useRouter()
 
   return (
@@ -36,40 +36,14 @@ function page() {
               <DialogHeader className='text-green-500 font-bold text-lg'>
                 Enter case details
               </DialogHeader>
+              <DialogTitle></DialogTitle>
 
-              <GenerateCaseForm step={step}/>
+              <GenerateCaseForm/>
 
-              <DialogFooter>
-                {
-                  step == 1 ?
-                    <button onClick={() => setStep(step+1)} className='p-2 rounded-xl bg-transparent font-bold hover:scale-105 text-green-500'>
-                      Next
-                    </button>
-                  :
-                    step == 2 ?
-                      <div className='flex justify-between w-full'>
-                        <button onClick={() => setStep(step-1)} className='p-2 rounded-xl bg-transparent font-bold hover:scale-105 text-white'>
-                          Go Back
-                        </button>
-                        <button onClick={() => setStep(step+1)} className='p-2 rounded-xl bg-transparent font-bold hover:scale-105 text-green-500'>
-                          Next
-                        </button>
-                      </div>
-                    :
-                    <div className='flex justify-between w-full'>
-                      <button onClick={() => setStep(step-1)} className='p-2 rounded-xl bg-transparent font-bold hover:scale-105 text-white'>
-                          Go Back
-                        </button>
-                      <button onClick={() => router.push('/manage/cases')} className='p-2 rounded-xl bg-transparent text-green-500 hover:scale-105'>
-                        Submit
-                      </button>
-                    </div>
-                }
-              
-              </DialogFooter>
             </DialogContent>
           </Dialog>
         </div>
+        
 
         <div className='mt-20 w-fit mx-auto'>
           <input type='text' placeholder='Enter a prompt' className='p-4 pr-60 rounded-2xl
