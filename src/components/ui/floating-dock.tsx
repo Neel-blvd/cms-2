@@ -97,13 +97,33 @@ const FloatingDockDesktop = ({
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
 }) => {
+
+  const [activeNavBar, setActiveNavBar] = useState<boolean>(true);
+  const [cursor, setCursor] = useState<boolean>(false);
   let mouseX = useMotionValue(Infinity);
+
+  useEffect(() => {
+    if(cursor)
+      setActiveNavBar(true);
+    if(activeNavBar && !cursor)
+    {
+      setTimeout(() => {
+          setActiveNavBar(false);
+        },
+      5000)
+    }
+  },
+  [cursor]
+  )
+
+
   return (
     <motion.div
+      onMouseEnter={() => setCursor(true)}
       onMouseMove={(e) => mouseX.set(e.pageX)}
-      onMouseLeave={() => mouseX.set(Infinity)}
+      onMouseLeave={() => {mouseX.set(Infinity);setCursor(false)}}
       className={cn(
-        "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-black dark:bg-neutral-900 px-4 pb-3",
+        `mx-auto hidden md:flex h-16 gap-4 items-end rounded-2xl bg-black dark:bg-neutral-900 px-4 pb-3 ${!activeNavBar ? 'opacity-15' : ''}`,
         className
       )}
     >

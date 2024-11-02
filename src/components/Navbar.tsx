@@ -17,7 +17,7 @@ function Navbar() {
         {
             title: 'Manage',
             icon: (<Image src={manage} alt='Manage navigation button' />),
-            href:'/manage'
+            href:'/manage/dashboard'
         },
         {
             title: 'CaseAI',
