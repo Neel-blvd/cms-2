@@ -6,7 +6,6 @@ import Image from 'next/image';
 import dashboardImage from '../../public/dashboard.png'
 import mattersImage from '../../public/matters.png'
 import billingImage from '../../public/billing.png'
-import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 

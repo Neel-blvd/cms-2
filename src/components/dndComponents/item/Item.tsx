@@ -3,8 +3,6 @@ import { useSortable } from '@dnd-kit/sortable';
 import React from 'react';
 import { CSS } from '@dnd-kit/utilities';
 import clsx from 'clsx';
-import Image from 'next/image';
-import dndIcon from '../../../../public/dndicon.png'
 
 type ItemType = {
   id: UniqueIdentifier;

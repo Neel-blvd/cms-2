@@ -22,17 +22,14 @@ import {
   sortableKeyboardCoordinates,
 } from '@dnd-kit/sortable';
 
-import { Inter } from 'next/font/google';
 
 // Components
 import Container from './container/Container';
 import Item from './item/Item';
 import Modal from './modal/Modal';
-import GenerateCaseForm from '../GenerateCaseForm';
 import AddClientForm from '../AddClientForm';
 
 
-const inter = Inter({ subsets: ['latin'] });
 
 type DNDType = {
   id: UniqueIdentifier;
@@ -242,7 +239,7 @@ export default function DndHeroComponent( {clientCategory}: {clientCategory: str
       );
       // In the same container
       if (activeContainerIndex === overContainerIndex) {
-        let newItems = [...containers];
+        const newItems = [...containers];
         newItems[activeContainerIndex].items = arrayMove(
           newItems[activeContainerIndex].items,
           activeitemIndex,

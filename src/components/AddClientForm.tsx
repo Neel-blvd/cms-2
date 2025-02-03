@@ -5,9 +5,9 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrig
 
 
 function AddClientForm( {onAddItem, clientName, setItemName}: {
-    onAddItem: Function,
+    onAddItem: () => void,
     clientName: string,
-    setItemName: Function
+    setItemName: (item: string) => void
 } ) {
  
     const [step, setStep] = useState(1);
