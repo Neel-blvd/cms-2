@@ -3,25 +3,21 @@ import React, { useState } from 'react'
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-  DialogFooter
 } from "@/components/ui/dialog"
 import send from './../../../public/send2.png'
 import Image from 'next/image'
 import Case from '@/components/Case'
 import { useRouter } from 'next/navigation'
 import GenerateCaseForm from '@/components/GenerateCaseForm'
-import { toast } from 'sonner'
 
 
 
 function page() {
 
   const [similarCases, setSimilarCases] = useState<string[] | undefined>([]);
-  const router = useRouter()
 
   return (
     <div className='bg-neutral-900 min-h-screen'>
@@ -55,7 +51,7 @@ function page() {
             </div>
         </div>
         {
-          similarCases?.map(x => <Case link={x} id={28362}/>)
+          similarCases?.map((x, idx) => <Case key={idx} link={x} id={28362}/>)
         }
     </div>
   )

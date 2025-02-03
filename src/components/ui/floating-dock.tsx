@@ -105,7 +105,7 @@ const FloatingDockDesktop = ({
   useEffect(() => {
     if(cursor)
       setActiveNavBar(true);
-    if(activeNavBar && !cursor)
+    else
     {
       setTimeout(() => {
           setActiveNavBar(false);
@@ -113,7 +113,7 @@ const FloatingDockDesktop = ({
       5000)
     }
   },
-  [cursor]
+    [cursor]
   )
 
 

@@ -35,7 +35,9 @@ function Case(props: {
                         <p>Case #12345</p>
                     }
                     </div>
-                    <iframe src={link} className='w-full h-screen'></iframe>
+                    <div className='flex justify-center'>
+                        <iframe src={link} className='w-1/2 h-screen'></iframe>
+                    </div>
                 </div>
                 
         }

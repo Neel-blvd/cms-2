@@ -1,8 +1,6 @@
 'use client'
 
-import { useRouter } from 'next/navigation';
-import React, { SetStateAction, useState } from 'react'
-import { toast } from 'sonner';
+import React, { useState } from 'react'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from './ui/select';
 
 
@@ -13,7 +11,8 @@ function AddClientForm( {onAddItem, clientName, setItemName}: {
 } ) {
  
     const [step, setStep] = useState(1);
-
+    const [caseType] = useState('');
+    console.log(caseType)
 
   return (
     <div className='flex flex-col w-full'>
@@ -51,9 +50,15 @@ function AddClientForm( {onAddItem, clientName, setItemName}: {
                         <SelectContent>
                             <SelectGroup>
                                 <SelectLabel>Type of Case</SelectLabel>
-                                <SelectItem value="Criminal">Criminal</SelectItem>
-                                <SelectItem value="Civil">Civil</SelectItem>
-                                <SelectItem value="Family">Family</SelectItem>
+                                <SelectItem value="Criminal">
+                                    Criminal
+                                </SelectItem>
+                                <SelectItem value="Civil">
+                                    Civil
+                                </SelectItem>
+                                <SelectItem value="Family">
+                                    Family
+                                </SelectItem>
                             </SelectGroup>
                         </SelectContent>
                     </Select>

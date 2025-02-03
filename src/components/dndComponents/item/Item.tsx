@@ -40,6 +40,23 @@ const Item = ({ id, title }: ItemType) => {
     >
       <div className="flex items-center text-black justify-between"{...listeners}>
         {title}
+        {
+          title == 'Jane Doe' || title == 'High High'
+            ?
+              <p className={`${title=='Jane Doe' || title=='High High' ? 'bg-slate-700 text-white' : 'bg-green-700 text-white'}   py-1 rounded-xl px-3`}>
+                Criminal
+              </p>
+            :
+              title == 'Example Example' || title == 'Medium Medium 2'
+              ?
+                <p className={`bg-green-700 text-white py-1 rounded-xl px-3`}>
+                  Civil
+                </p>
+              :
+                <p className={`${title=='Jane Doe' ? '' : 'bg-amber-700 text-white'}   py-1 rounded-xl px-3`}>
+                  Family
+                </p>
+          }
       </div>
     </div>
   );

@@ -22,15 +22,11 @@ import {
   sortableKeyboardCoordinates,
 } from '@dnd-kit/sortable';
 
-import { Inter } from 'next/font/google';
-
 // Components
 import Container from '../../components/dndComponents/container/Container';
 import Item from '../../components/dndComponents/item/Item';
 import Modal from '../../components/dndComponents/modal/Modal';
 
-
-const inter = Inter({ subsets: ['latin'] });
 
 type DNDType = {
   id: UniqueIdentifier;

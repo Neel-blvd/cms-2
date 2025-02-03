@@ -1,10 +1,9 @@
 import Image from "next/image";
 import send from './../../public/send2.png'
 import { BackgroundLines } from "@/components/ui/background-lines";
-import { TypewriterEffect, TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
-import LampDemo, { LampContainer } from "@/components/ui/lamp";
-import {motion} from 'framer-motion'
+import LampDemo from "@/components/ui/lamp";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import Link from "next/link";
 
@@ -95,7 +94,7 @@ export default function Home() {
               <br />
               <p>1. Legal Case Details - Case Type, Parties Involved, Relevant Facts, Evidence</p>
               <p>2. Jurisdiction - Geographical Location</p>
-              <p>3. Plaintiff's desired outcome</p>
+              <p>3. Plaintiff&apos;s desired outcome</p>
             </div>
             <div className="text-white">
               <p>Output -</p>
