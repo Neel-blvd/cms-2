@@ -249,7 +249,7 @@ export default function DndHeroComponent( {clientCategory}: {clientCategory: str
         setContainers(newItems);
       } else {
         // In different containers
-        let newItems = [...containers];
+        const newItems = [...containers];
         const [removeditem] = newItems[activeContainerIndex].items.splice(
           activeitemIndex,
           1,
@@ -292,7 +292,7 @@ export default function DndHeroComponent( {clientCategory}: {clientCategory: str
       );
 
       // Remove the active item from the active container and add it to the over container
-      let newItems = [...containers];
+      const newItems = [...containers];
       const [removeditem] = newItems[activeContainerIndex].items.splice(
         activeitemIndex,
         1,
@@ -358,7 +358,7 @@ export default function DndHeroComponent( {clientCategory}: {clientCategory: str
 
       // In the same container
       if (activeContainerIndex === overContainerIndex) {
-        let newItems = [...containers];
+        const newItems = [...containers];
         newItems[activeContainerIndex].items = arrayMove(
           newItems[activeContainerIndex].items,
           activeitemIndex,
@@ -367,7 +367,7 @@ export default function DndHeroComponent( {clientCategory}: {clientCategory: str
         setContainers(newItems);
       } else {
         // In different containers
-        let newItems = [...containers];
+        const newItems = [...containers];
         const [removeditem] = newItems[activeContainerIndex].items.splice(
           activeitemIndex,
           1,
@@ -406,7 +406,7 @@ export default function DndHeroComponent( {clientCategory}: {clientCategory: str
         (item) => item.id === active.id,
       );
 
-      let newItems = [...containers];
+      const newItems = [...containers];
       const [removeditem] = newItems[activeContainerIndex].items.splice(
         activeitemIndex,
         1,
