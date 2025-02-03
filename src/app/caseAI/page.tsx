@@ -10,12 +10,11 @@ import {
 import send from './../../../public/send2.png'
 import Image from 'next/image'
 import Case from '@/components/Case'
-import { useRouter } from 'next/navigation'
 import GenerateCaseForm from '@/components/GenerateCaseForm'
 
 
 
-function page() {
+function Page() {
 
   const [similarCases, setSimilarCases] = useState<string[] | undefined>([]);
 
@@ -57,4 +56,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

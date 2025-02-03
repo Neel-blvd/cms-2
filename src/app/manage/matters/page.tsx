@@ -1,6 +1,6 @@
 import React from 'react'
 
-function page() {
+function Page() {
   return (
     <div className='min-h-screen bg-neutral-500 w-full'>
       Matters
@@ -8,4 +8,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

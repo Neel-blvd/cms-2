@@ -2,7 +2,7 @@
 import DndHeroComponent from '@/components/dndComponents/DndHeroComponent'
 import React, {useState} from 'react'
 
-function page() {
+function Page() {
 
   const [clientCategory, setClientCategory] = useState('Case Status')
 
@@ -41,4 +41,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
